@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+main {
+  /* background-color: rgb(255, 17, 0); */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+.main {
+}
+.user_div {
+  background-color: rgba(0, 0, 0, 0.562);
+  width: 290px;
+  height: 100px;
+  border-radius: 20px;
+  border: 2px solid black;
+  display: flex;
+  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.432);
+}
+#imgAvatar {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  margin: 0px 0px 0px 10px;
+}
+#imgAvatar img {
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(247, 247, 247, 0.329);
+}
+#userName {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  margin: 0px 0px 0px 20px;
+}
+#userName h2 {
+  color: rgb(255, 255, 255);
+}
+.rank_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.rank {
+  height: 24px;
+  margin: 0px 0px 0px 5px;
+}
+#Main_avatar img {
+  height: 130px;
+  border-radius: 50%;
+}
+.Main_card {
+  margin: 0px 0px 40px 0px;
+}
+.nameAndRank {
+  display: flex;
+}
+
+.rainbow-text {
+  margin: 40px 0px 0px 0px;
+  font-size: 2em;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    rgb(255, 255, 3),
+    green,
+    rgb(0, 0, 241),
+    rgb(149, 0, 255),
+    rgb(255, 208, 1)
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow-move 5s linear infinite;
+}
+
+@keyframes rainbow-move {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.play {
+  background-color: rgb(8, 8, 8);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+/* .mainCard{
+  background-color: rgb(166, 255, 0);
+  height: 200px;
+  width: 500px;
+  
+} */
+.mainCard h1 {
+  color: red;
+}
+#myVideo {
+  z-index: -1;
+  object-fit: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.9;
+}
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 0px 0px;
+}
+.spt {
+  /* background-color: white; */
+}
+
+.tt {
+  /* background-color: rgb(253, 253, 253); */
+  margin: 9px 0px 0px 0px;
+}
+.git {
+  margin: 9px 0px 0px 9px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Positioning */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Tooltip height */
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Arrow at the bottom */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Position at the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent; /* Black arrow with transparent sides */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
