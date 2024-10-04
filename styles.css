@@ -4,7 +4,6 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 main {
-  /* background-color: rgb(255, 17, 0); */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,15 +13,6 @@ main {
   height: 100vh;
 }
 .main {
-}
-.user_div {
-  background-color: rgba(0, 0, 0, 0.562);
-  width: 290px;
-  height: 100px;
-  border-radius: 20px;
-  border: 2px solid black;
-  display: flex;
-  box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.432);
 }
 #imgAvatar {
   display: flex;
@@ -59,12 +49,66 @@ main {
 #Main_avatar img {
   height: 130px;
   border-radius: 50%;
+  border: 4px solid rgb(0, 0, 0);
+  box-shadow: 0px 0px 20px white;
 }
 .Main_card {
   margin: 0px 0px 40px 0px;
 }
 .nameAndRank {
   display: flex;
+}
+.user_div {
+  background-color: rgba(0, 0, 0, 0.562);
+  width: 290px;
+  height: 100px;
+  border-radius: 20px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rainbow 4s infinite alternate;
+}
+
+.user_div-wrapper {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    red,
+    rgb(251, 255, 0),
+    rgb(52, 0, 241),
+    rgb(0, 255, 0),
+    rgb(204, 0, 255),
+    rgb(149, 0, 255),
+    rgb(255, 0, 255),
+    red
+  );
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  }
 }
 
 .rainbow-text {
@@ -104,13 +148,9 @@ main {
   text-align: center;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
-/* .mainCard{
-  background-color: rgb(166, 255, 0);
-  height: 200px;
-  width: 500px;
-  
-} */
+
 .mainCard h1 {
   color: red;
 }
@@ -128,15 +168,21 @@ main {
   margin: 20px 0px 0px 0px;
 }
 .spt {
-  /* background-color: white; */
+  margin: 9px 10px 0px 0px;
 }
 
 .tt {
-  /* background-color: rgb(253, 253, 253); */
   margin: 9px 0px 0px 0px;
 }
 .git {
   margin: 9px 0px 0px 9px;
+  border-radius: 50%;
+}
+.dc {
+  margin: 4px 0px 0px 7px;
+}
+.fb {
+  margin: 5px 0px 0px 6px;
 }
 .tooltip {
   position: relative;
@@ -159,28 +205,25 @@ main {
   padding: 5px 0;
   border-radius: 6px;
 
-  /* Positioning */
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Tooltip height */
+  bottom: 125%;
   left: 50%;
   margin-left: -60px;
 
-  /* Fade in */
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-/* Arrow at the bottom */
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: 100%; /* Position at the bottom of the tooltip */
+  top: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent; /* Black arrow with transparent sides */
+  border-color: black transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
