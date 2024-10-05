@@ -230,3 +230,86 @@ main {
   visibility: visible;
   opacity: 1;
 }
+/* .load{
+  background-color: black;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+} */
+.load {
+  background-color: black;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: dotPulse 1.5s infinite, rainbows 3s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 1.3s;
+}
+
+@keyframes dotPulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes rainbows {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orange;
+  }
+  40% {
+    background-color: yellow;
+  }
+  60% {
+    background-color: red;
+  }
+  80% {
+    background-color: orange;
+  }
+  100% {
+    background-color: yellow;
+  }
+}

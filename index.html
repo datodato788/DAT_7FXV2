@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
   </head>
+
   <div class="play" id="play" onclick="play()">
     <div class="mainCard"><h1>click to enter...</h1></div>
   </div>
   <div class="backVidoe"></div>
-  <body>
+  <body onload="loading()" >
+    <div   id="load" class="load">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+      </div>
+    </div>
     <main>
       <div>
         <audio

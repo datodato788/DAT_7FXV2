@@ -1,6 +1,4 @@
 fetch("https://discord.com/api/guilds/1273294291518619749/widget.json").then((d) => { return d.json() }).then((user) => {
-    // 
-    // console.log(user.presence_count    )
 
 
 
@@ -85,4 +83,9 @@ function play() {
     play.style.display = "none"
     myVideo.play()
     audio.play()
+}
+function loading() {
+    const load = document.getElementById("load")
+    load.style.display = "none"
+
 }
