@@ -6,9 +6,10 @@
     <title>DC: hums_gd7</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <style id="style"></style>
   </head>
 
-  <div class="play" id="play" onclick="play()">
+  <div style="display: none" class="play" id="play" onclick="play()">
     <div class="mainCard"><h1>click to enter...</h1></div>
   </div>
   <div class="backVidoe"></div>
@@ -23,56 +24,112 @@
     </div>
     <main>
       <div>
-        <audio
-          id="audio"
-          src="/img/07. Ice Cube  - It Was A Good Day (1).mp3"
-        ></audio>
+
       </div>
 
-      <video onload loop id="myVideo"><source src="img/v.mp4" /></video>
+      <img id="myBackImage" src="img/background.jpg" alt="Walwiper" />
       <div class="main">
         <div class="Main_card">
           <div id="Main_avatar"></div>
           <div class="Main_name"><h1 class="rainbow-text">DATO7</h1></div>
         </div>
-        <!-- -------------card -->
-        <div class="user_div">
-          <div id="imgAvatar">
-            <div class="statusDiv">
-              <div id="status" class="status">
-               
-              </div>
+        <!--card -->
+
+        <style>
+          .sword {
+            display: flex;
+            align-items: center;
+          }
+          .sw {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 270px;
+            height: 17px;
+          }
+          .sword_hand {
+            height: 20px;
+            width: 73px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          .box1 {
+            background-color: rgb(255, 255, 255);
+            width: 9px;
+            height: 100%;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          .box2 {
+            background-color: rgb(94, 94, 94);
+            width: 9px;
+            height: 100%;
+            border-radius: 5px;
+          }
+
+          .box3 {
+            background-color: rgb(94, 94, 94);
+            width: 9px;
+            height: 100%;
+            border-radius: 5px;
+          }
+          .box4 {
+            background-color: rgb(94, 94, 94);
+            width: 9px;
+            height: 100%;
+            border-radius: 5px;
+          }
+          .box5 {
+            background-color: rgb(255, 255, 255);
+            width: 9px;
+            height: 100%;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        </style>
+        <div class="sword">
+          <div class="sword_hand">
+            <div class="b1">
+              <div class="box1"></div>
             </div>
+            <div class="b2"><div class="box2"></div></div>
+            <div class="b3"><div class="box3"></div></div>
+            <div class="b4"><div class="box4"></div></div>
+            <div class="b5"><div class="box5"></div></div>
+            
           </div>
+          <div id="userName"></div>
 
-          <div class="nameAndRank">
-            <div id="userName"></div>
-            <div class="rank_div">
-              <img class="rank" src="/img/HypeSquad.png" alt="Rank" />
-              <img class="rank" src="/img/ActiveDeveloper.png" alt="Rank" />
+          <div id="sw" class="sw user_div">
 
-            </div>
           </div>
         </div>
+
         <div class="socialIcons">
           <div class="spt tooltip">
             <span class="tooltiptext">Spotify</span>
-            <a target="_blank" href=""></a>
-            <svg
-              fill="#000000"
-              height="40px"
-              width="40px"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 305 305"
-              xml:space="preserve"
+            <a
+              target="_blank"
+              href="https://open.spotify.com/user/31qtjrhz66v4ezcprffez5oeaveu"
             >
-              <g id="XMLID_85_">
-                <path
-                  id="XMLID_86_"
-                  d="M152.441,0C68.385,0,0,68.39,0,152.453C0,236.568,68.385,305,152.441,305
+              <svg
+                fill="#ffffff"
+                height="40px"
+                width="40px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 305 305"
+                xml:space="preserve"
+              >
+                <g id="XMLID_85_">
+                  <path
+                    id="XMLID_86_"
+                    d="M152.441,0C68.385,0,0,68.39,0,152.453C0,236.568,68.385,305,152.441,305
                 C236.562,305,305,236.568,305,152.453C305,68.39,236.562,0,152.441,0z M75.08,208.47c17.674-5.38,35.795-8.108,53.857-8.108
                 c30.676,0,60.96,7.774,87.592,22.49c1.584,0.863,3.024,3.717,3.67,7.27c0.646,3.552,0.389,7.205-0.648,9.105
                 c-1.309,2.438-3.965,4.014-6.768,4.014c-1.389,0-2.61-0.312-3.831-0.972c-24.448-13.438-52.116-20.542-80.015-20.542
@@ -86,16 +143,16 @@
                 c43.856,0,85.857,9.86,124.851,29.312c2.708,1.336,4.727,3.642,5.687,6.493c0.96,2.854,0.748,5.926-0.592,8.64
                 c-1.826,3.655-5.772,7.59-10.121,7.59c-1.677,0-3.399-0.393-4.924-1.109c-35.819-17.921-74.477-27.008-114.9-27.008
                 C108.164,108.014,87.234,110.568,66.727,115.606z"
-                />
-              </g>
-            </svg>
+                  />
+                </g></svg
+            ></a>
           </div>
           <div class="tt tooltip">
             <span class="tooltiptext">Tiktok</span>
 
             <a target="_blank" href="https://www.tiktok.com/@dat_7ex?lang=en">
               <svg
-                fill="#000000"
+                fill="#ffffff"
                 width="40px"
                 height="40px"
                 viewBox="0 0 512 512"
@@ -116,6 +173,7 @@
                 width="40"
                 height="40"
                 viewBox="0 0 24 24"
+                fill="#ffffff"
               >
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
@@ -130,7 +188,7 @@
               href="https://discord.com/users/885037314806530069"
             >
               <svg
-                fill="#000000"
+                fill="#ffffff"
                 width="50px"
                 height="50px"
                 viewBox="0 0 24 24"
@@ -154,6 +212,7 @@
                 width="45"
                 height="45"
                 viewBox="0 0 50 50"
+                fill="#ffffff"
               >
                 <path
                   d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"
